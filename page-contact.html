@@ -1,0 +1,15 @@
+---
+layout: page
+title: Contact
+permalink: /contact.html
+---
+<p>Want to hit me up about something? Feel free to do so on the following:</p>
+<ul>
+    {% for social in site.data.socials %}
+        {% if social.external_url %}
+            <li><b>{{ social.title }}:</b> <a href="{{ social.external_url }}{{ social.username }}">{{ social.text_prefix }}{{ social.username }}</a></li>
+        {% else %}
+            <li><b>{{ social.title }}:</b> {{ social.text_prefix }}{{ social.username }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
