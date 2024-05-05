@@ -1,14 +1,9 @@
 [
     {
-        "title": "Email",
-        "text_prefix": "",
-        "username": "redacted@redacted.com",
-        "external_url": "mailto:"
-    },
-    {
         "title": "Discord",
         "text_prefix": "",
-        "username": "thesiriussystem"
+        "username": "thesiriussystem",
+        "external_url": ""
     },
     {
         "title": "Twitter",

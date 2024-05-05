@@ -1,12 +1,25 @@
 ---
 layout: page
 title: Portfolio
-permalink: /portfolio.html
+permalink: /portfolio/
 ---
-{% for project in site.portfolio %}
+<style>
+    .project
+    {
+        background-color: rgba(150, 227, 165, 1.0);
+        border: 8px outset rgba(219, 178, 209, 1.0);
+        border-radius: 24px;
+        padding-left: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 16px;
+    }
+</style>
+
+{% for project in site.projects %}
     <div class="project">
-        <h2>{{ project.title }}</h2>
-        <p>{{ project.description }}</p>
+        <h3>{{ project.title || truncate: 32, "..." }}</h3>
+        <p>{{ project.short_description }}</p>
         <p><b><a href="{{ project.url }}">Learn More</a></b></p>
     </div>
 {% endfor %}

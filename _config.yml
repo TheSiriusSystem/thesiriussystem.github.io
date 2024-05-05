@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "TheSiriusSystem's Website"
+title: TheSiriusSystem's Website
 description: ""
 domain: thesiriussystem.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -29,8 +29,9 @@ theme: minima
 plugins:
     - jekyll-feed
 collections:
-    portfolio:
+    projects:
         output: true
+        permalink: /portfolio/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

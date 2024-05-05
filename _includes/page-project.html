@@ -1,0 +1,90 @@
+{% comment %}
+Project page front matter documentation. All variables are optional.
+
+The types written here are not intended to represent the HTML/Jekyll
+documentation, some were made up for the sake of clarity.
+
+short_description: string (Text displayed for the project listing in Portfolio.)
+long_description: string (Text displayed on the project page.)
+tools_used: array<string> (List of software used to develop the project.)
+video: path (Project showcase video.)
+images: array<path> (Collection of project screenshots.)
+external_url: url (Project source code link.)
+{% endcomment %}
+
+<style>
+    .gallery
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 25px;
+    }
+    img
+    {
+        width: 100%;
+        height: auto;
+        border: 4px solid rgba(252, 137, 172, 1.0);
+        border-radius: 4px;
+    }
+    .tooltip
+    {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        font-size: smaller;
+    }
+    .tooltiptext
+    {
+        visibility: hidden;
+        opacity: 0;
+    }
+    .tooltip:hover .tooltiptext
+    {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+
+<p><b>
+    {% if page.external_url %}
+        <a href="{{ page.external_url }}">View Source</a>
+    {% else %}
+        <s>View Source</s>
+    {% endif %}
+</b></p>
+
+<div class="desc">
+    <h2>Description</h2>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</div>
+<p>{{ page.long_description | default: "No description available." }}</p>
+
+<h2>Built With</h2>
+<ul>
+    {% if page.tools_used.size > 0 %}
+        {% for software in page.tools_used %}
+            <li><b>{{ software }}</b></li>
+        {% endfor %}
+    {% else %}
+        <li><b>[ACCESS DENIED]</b></li>
+    {% endif %}
+</ul>
+
+{% if page.video %}
+    <h2>Demonstration</h2>
+    <video controls width="320" height="200">
+        <source src="{{ page.video }}"/>
+    </video>
+{% endif %}
+
+{% if page.images.size > 0 %}
+    <h2>Gallery</h2>
+    <div class="gallery">
+        {% for image in page.images %}
+            <div class="tooltip">
+                <a href="{{ image }}"><img src="{{ image }}"></a>
+                <span class="tooltiptext">Click to enlarge the image.</span>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
