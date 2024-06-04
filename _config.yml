@@ -23,6 +23,9 @@ description: ""
 domain: thesiriussystem.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://thesiriussystem.github.io # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: TheSiriusSystem
+github_username: TheSiriusSystem
+pronouns_page_username: thesiriussystem
 
 # Build settings
 theme: minima

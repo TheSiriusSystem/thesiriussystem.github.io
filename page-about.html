@@ -3,22 +3,46 @@ layout: page
 title: About
 permalink: /about/
 ---
-<h4>Hey there!</h4>
-I'm 
+{% comment %}
+The types written here are not intended to represent the HTML/Jekyll
+documentation, some were made up for the sake of clarity.
 
-<p><b><a href="https://en.pronouns.page/@thesiriussystem">Click here to see my pronouns.</a></b></p>
+title: string
+description: string (Optional.)
+items: array<string> (Optional.)
+{% endcomment %}
 
-<h2>Skills</h2>
-<p>TODO</p>
-<ul>
-    <li><b>Programming:</b> Luau, Lua, GDScript, C#</li>
-    <li><b>Game Engines:</b> Roblox, Godot, Unity</li>
-    <li><b>Game Modding</b></li>
-    <li><b>Graphics Design:</b> paint.net</li>
-</ul>
+<style>
+    .sublist
+    {
+        list-style: square;
+        letter-spacing: 1px;
+    }
+</style>
 
-<h2>Mission</h2>
-<p>TODO</p>
+<h4>Hey there! 😉</h4>
+<p>I'm Sirius, an avid gamer with a particular passion for programming. Being mainly self-taught, I've been interested in game/software development and dabbling with game modding since childhood.</p>
+<p><b><a href="https://en.pronouns.page/@{{ site.pronouns_page_username }}">My pronouns.page</a></b></p>
 
 <h2>Hobbies & Interests</h2>
-<p>TODO</p>
+<p>Video games and programming are where my passion lies; I tend to game a lot and/or code whatever pops up in my mind! Games, software, game mods, etc... Whenever I'm not busy with either, you may sometimes find me indulging in either drawing or walking.</p>
+<p>I have a fondness for art, especially those that give off a surreal feeling. While I can sorta draw pixel art, it isn't my strongest suit in general! I am more adept at editing images than making new stuff.</p>
+<p>Lastly, music makes up a portion of my daily life! And I also happen to hold a special place for the outdoors in my heart, especially the greens. I prefer walking close to greenery and appreciating the view whenever possible.</p>
+
+<h2>Mission</h2>
+<p>My mission is simple. Alongside constantly refining my skills, I aspire to be a game developer first and foremost: jack-of-all-trades of the programming world second. Additionally, contributing to open-source projects is definitely something on my mind despite not being a priority.</p>
+
+<h2>Skills</h2>
+<p>Here, you can learn more about my main areas of expertise, whether it be out of passion or as a career! Nested items are ordered by how much experience I have with them.</p>
+<ul>
+    {% for skill in site.data.skills %}
+        <li><b>{{ skill.title }}</b>{% if skill.description != nil and skill.description != "" %}<b>:</b> {{ skill.description }}{% endif %}</li>
+        {% if skill.items.size > 0 %}
+            <ul class="sublist">
+                {% for item in skill.items %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+</ul>

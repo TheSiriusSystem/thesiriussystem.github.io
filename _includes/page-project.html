@@ -1,15 +1,10 @@
 {% comment %}
-Project page front matter documentation. All variables are optional.
-
-The types written here are not intended to represent the HTML/Jekyll
-documentation, some were made up for the sake of clarity.
-
-short_description: string (Text displayed for the project listing in Portfolio.)
-long_description: string (Text displayed on the project page.)
-tools_used: array<string> (List of software used to develop the project.)
-video: path (Project showcase video.)
-images: array<path> (Collection of project screenshots.)
-external_url: url (Project source code link.)
+description: string? (Text displayed for the project listing in Portfolio.)
+long_description: string? (Text displayed on the project page. For flexibility, this is intended to be used like you were editing a HTML file.)
+tools_used: array<string>? (List of software used to develop the project.)
+video: path? (Project showcase video.)
+images: array<path>? (Collection of project screenshots.)
+external_url: url? (Project source code link.)
 {% endcomment %}
 
 <style>
@@ -57,7 +52,7 @@ external_url: url (Project source code link.)
     <h2>Description</h2>
     <link rel="stylesheet" href="/assets/css/styles.css">
 </div>
-<p>{{ page.long_description | default: "No description available." }}</p>
+{{ page.long_description | default: "<p>No description available.</p>" }}
 
 <h2>Built With</h2>
 <ul>

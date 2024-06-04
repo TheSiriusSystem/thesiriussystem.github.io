@@ -3,7 +3,14 @@ layout: page
 title: Contact
 permalink: /contact/
 ---
-<p>Want to hit me up about something? Feel free to do so!</p>
+{% comment %}
+title: string
+text_prefix: string?
+username: string
+external_url: url?
+{% endcomment %}
+
+Want to hit me up about something? Feel free to do so!
 <p>You can contact me on:</p>
 <ul>
     {% for social in site.data.socials %}

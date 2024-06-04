@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Programming",
+        "description": "Not an expert by any means, 9 years of experience.",
+        "items": [
+            "<a href=\"https://www.lua.org/\">Lua</a><a href=\"https://luau-lang.org/\">(u)</a>",
+            "GDScript",
+            "C#",
+            "HTML/CSS",
+            "JavaScript"
+        ]
+    },
+    {
+        "title": "Game Development",
+        "description": "Extensive experience with Roblox scripting, proficient in Godot.",
+        "items": [
+            "Roblox",
+            "Godot",
+            "Unity"
+        ]
+    },
+    {
+        "title": "Web Development",
+        "description": "Slightly experienced but new, roughly 3 years of experience.",
+        "items": [
+            "WordPress",
+            "Jekyll"
+        ]
+    }
+]
