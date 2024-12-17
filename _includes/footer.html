@@ -7,6 +7,7 @@
     <div class="has-background-grey-darker">
         <div class="container columns">
             <!--Name Section-->
+            {% comment %}
             <div class="column has-text-left-desktop has-text-centered-mobile">
                 <a href="{{site.url}}{{site.baseurl}}/#about">
                     <div class="columns">
@@ -24,8 +25,10 @@
                     </div>
                 </a>
             </div>
+            {% endcomment %}
 
             <!--Link Section-->
+            {% comment %}
             <div class="column has-text-white">
                 <h3>More Links</h3>
                 {% for sitepage in site.html_pages offset: 4 %}
@@ -39,6 +42,7 @@
                     <a target="_blank" href="{{site.url}}{{site.baseurl}}/feed.xml">Subscribe via RSS</a>
                 </li>
             </div>
+            {% endcomment %}
 
             <!--Blog-post Section-->
             <div class="column has-text-white">
