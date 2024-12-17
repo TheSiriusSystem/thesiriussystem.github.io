@@ -1,6 +1,11 @@
-<section class="hero is-fullheight has-text-centered has-background-white-ter" id="about">
+<section class="hero is-fullheight has-text-centered" style="background-color: #3e436f" id="about">
     <div class="hero-body">
         <div class="container">
+            <div class="heading">
+                <h1 class="title is-size-2 is-uppercase has-text-white has-text-weight-bold">About Me</h1>
+                <br>
+                <p class="subtitle is-uppercase has-text-white has-text-weight-normal">A Passionate Developer Who Loves Programming.</p>
+            </div>
             <div class="columns">
                 <div class="column is-one-fifth-desktop is-one-fifth-tablet is-one-fifth-fullhd">
                     <figure class="image">
@@ -8,23 +13,24 @@
                     </figure>
                 </div>
                 <div class="column has-text-left-desktop has-text-left-tablet has-text-left-fullhd has-text-left-widescreen">
-                    <p>I am a software engineer and aspiring graphic designer. While my main passion lies within programming, I can also deliver bold and visually striking visuals. From creating engaging games to crafting stunning designs, I'm all about bringing imagination to life. Let's build something amazing together!</p>
+                    <p class="has-text-white">
+                        {{site.author-about}}
+                    </p>
                     <br>
                     <div class="container columns is-centered">
                         <div>
-                            <a href="{{site.url}}{{site.baseurl}}/#contact"
-                                class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined">Contact
-                                Me</a>
+                            <a href="{{site.url}}{{site.baseurl}}/#contact" class="button is-rounded is-uppercase has-text-weight-normal is-white is-outlined">
+                                Contact Me
                             </a>
                         </div>
                         <div>
-                            <a href="{{site.url}}{{site.baseurl}}/blog"
-                                class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined">View
-                                My Blog</a>
+                            <a href="{{site.url}}{{site.baseurl}}/blog" class="button is-rounded is-uppercase has-text-weight-normal is-white is-outlined">
+                                View My Blog
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </section>
