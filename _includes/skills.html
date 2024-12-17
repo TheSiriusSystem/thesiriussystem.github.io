@@ -1,0 +1,38 @@
+<section class="hero is-fullheight has-text-centered" style="background-color: #e1e6eb" id="skills">
+    <div class="hero-body">
+        <div class="container">
+            <div class="heading">
+                <h1 class="title is-size-2 is-uppercase has-text-weight-bold">
+                    Skills
+                </h1>
+                <br>
+                <p class="subtitle is-uppercase has-text-weight-normal">
+                    What I Excel At.
+                </p>
+            </div>
+
+            <div class="columns is-centered is-multiline">
+                {% for service in site.data.skills %}
+                <div class="column is-one-third-desktop is-half-tablet">
+                    <div class="service-box box has-text-centered">
+                        <div>
+                            <!-- Icon -->
+                            <figure class="image is-64x64 is-inline-block">
+                                <img src="{{service.icon}}">
+                            </figure>
+
+                            <!-- Title -->
+                            <h2 class="title is-4 is-uppercase">
+                                {{service.title}}
+                            </h2>
+
+                            <!-- Paragraph -->
+                            <p>{{service.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

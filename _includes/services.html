@@ -1,55 +1,37 @@
-<section class="section" style="background-color: #83a1cd" id="services">
-    <div class="container has-text-centered">
-        <div class="heading">
-            <h1 class="title is-size-2 is-uppercase has-text-white has-text-weight-bold">My Services</h1>
-            <br>
-            <p class="subtitle is-uppercase has-text-white has-text-weight-normal">What I Can Do.</p>
-        </div>
-        <div class="columns is-multiline is-centered">
-            <!-- Service 1: Video Game Development -->
-            <div class="column is-one-third-desktop is-half-tablet">
-                <div class="box has-text-left">
-                    <h3 class="title is-4 has-text-black is-uppercase has-text-weight-bold">
-                        Video Game Development
-                    </h3>
-                    <br>
-                    <p class="subtitle has-text-grey-dark is-size-6">
-                        From concept to reality, I create immersive and engaging gaming experiences. Whether it’s gameplay mechanics, level design, or storytelling, I bring games to life with precision.
-                    </p>
-                </div>
+<section class="hero is-fullheight has-text-centered" style="background-color: #1e3f91" id="services">
+    <div class="hero-body">
+        <div class="container">
+            <div class="heading">
+                <h1 class="title is-size-2 is-uppercase has-text-white has-text-weight-bold">
+                    Services
+                </h1>
+                <br>
+                <p class="subtitle is-uppercase has-text-white has-text-weight-normal">
+                    What I Can Do For You.
+                </p>
             </div>
-            <!-- Service 2: Software Development -->
-            <div class="column is-one-third-desktop is-half-tablet">
-                <div class="box has-text-left">
-                    <h3 class="title is-4 has-text-black is-uppercase has-text-weight-bold">
-                        Software Development
-                    </h3>
-                    <p class="subtitle has-text-grey-dark is-size-6">
-                        I specialize in building scalable and efficient software solutions tailored to your needs. Let’s solve problems and innovate together with clean, maintainable code.
-                    </p>
+
+            <div class="columns is-centered is-multiline">
+                {% for service in site.data.services %}
+                <div class="column is-one-third-desktop is-half-tablet">
+                    <div class="service-box box has-text-centered">
+                        <div>
+                            <!-- Icon -->
+                            <figure class="image is-64x64 is-inline-block">
+                                <img src="{{service.icon}}">
+                            </figure>
+
+                            <!-- Title -->
+                            <h2 class="title is-4 is-uppercase">
+                                {{service.title}}
+                            </h2>
+
+                            <!-- Paragraph -->
+                            <p>{{service.description}}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!-- Service 3: Graphic Design -->
-            <div class="column is-one-third-desktop is-half-tablet">
-                <div class="box has-text-left">
-                    <h3 class="title is-4 has-text-black is-uppercase has-text-weight-bold">
-                        Graphic Design
-                    </h3>
-                    <p class="subtitle has-text-grey-dark is-size-6">
-                        Bold visuals that stand out. I design logos, banners, and visuals that communicate your brand’s message with clarity and creativity.
-                    </p>
-                </div>
-            </div>
-            <!-- Service 3: Graphic Design -->
-            <div class="column is-one-third-desktop is-half-tablet">
-                <div class="box has-text-left">
-                    <h3 class="title is-4 has-text-black is-uppercase has-text-weight-bold">
-                        Graphic Design
-                    </h3>
-                    <p class="subtitle has-text-grey-dark is-size-6">
-                        Bold visuals that stand out. I design logos, banners, and visuals that communicate your brand’s message with clarity and creativity.
-                    </p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

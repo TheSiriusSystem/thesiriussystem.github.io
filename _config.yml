@@ -9,7 +9,7 @@ baseurl:
 # Title of the Site
 title: Blake Sirius Anacleto
 # Description of the Site
-description: Home of a Software Engineer & Graphic Designer
+description: Home of a Software Engineer
 # URL of Image of the Site
 site-image: /assets/images/hero_image.jpg
 # Keywords of the Site
@@ -35,14 +35,16 @@ google-analytics: UA-163806439-1
 # Disqus
 disqus-shortname: thedevslot
 
-# Name of the Author
+# Author Main Details
 author-name: Blake Sirius Anacleto
+author-role: Software Engineer & Graphic Designer
+author-tagline: Creating Designs That Stand Out.
 # URL for the Image of the Author
 author-image: /assets/images/avatar.jpg
 # 60 Words About the Author
 author-about: I am a software engineer and aspiring graphic designer. While my main passion lies within programming, I can also deliver bold and visually striking visuals. I specialize in building engaging games and crafting stunning designs. Let's build something amazing together!
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
-author-url: https://github.com/thedevslot
+author-url: https://github.com/TheSiriusSystem
 
 # SASS
 sass:

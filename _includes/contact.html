@@ -1,13 +1,13 @@
-<section class="hero is-fullheight has-text-centered" style="background-color: #83a1cd" id="contact">
+<section class="hero is-fullheight has-text-centered" style="background-color: #c0e4ff" id="contact">
     <div class="hero-body">
         
         <div class="container">
             <div class="heading">
-                <h1 class="title is-size-2 is-uppercase has-text-white has-text-weight-bold">
+                <h1 class="title is-size-2 is-uppercase has-text-weight-bold">
                     Let's Get In Touch!
                 </h1>
                 <br>
-                <p class="subtitle is-uppercase has-text-white has-text-weight-normal">
+                <p class="subtitle is-uppercase has-text-weight-normal">
                     Your Next Idea Starts Here.
                 </p>
             </div>
@@ -30,23 +30,23 @@
             </a>
             {% endunless %}
             <hr>
-            <h3 class="is-size-5 is-uppercase has-text-weight-semibold has-text-white is-marginless">
+            <h3 class="is-size-5 is-uppercase has-text-weight-semibold is-marginless">
                 Follow Me Here
             </h3>
             <div class="column is-full is-size-3">
                 {% unless site.facebook_username == "" or site.facebook_username == nil %}
                 <a href="https://www.facebook.com/{{site.facebook_username}}" target="_blank" class="has-text-black">
-                    <img src="assets/images/facebook.svg" alt="Facebook Icon">
+                    <img src="assets/images/facebook.svg" alt="Facebook Icon" class="icon-social">
                 </a>
                 {% endunless %}
                 {% unless site.twitter_username == "" or site.twitter_username == nil %}
                 <a href="https://x.com/{{site.twitter_username}}" target="_blank" class="has-text-black">
-                    <img src="assets/images/twitter.svg" alt="Twitter/X Icon">
+                    <img src="assets/images/twitter.svg" alt="Twitter/X Icon" class="icon-social">
                 </a>
                 {% endunless %}
                 {% unless site.github_username == "" or site.github_username == nil %}
                 <a href="https://github.com/{{site.github_username}}" target="_blank" class="has-text-black">
-                    <img src="assets/images/github.svg" alt="GitHub Icon">
+                    <img src="assets/images/github.svg" alt="GitHub Icon" class="icon-social">
                 </a>
                 {% endunless %}
             </div>

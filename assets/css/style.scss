@@ -84,6 +84,31 @@ a.navbar-item.is-active {
     }
 }
 
+#skills {
+    .box {
+        background-color: #bcc6cc;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+#services {
+    .box {
+        background-color: #102e5e;
+        color: #87cefa;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h2 {
+        color: #87cefa;
+    }
+}
+
 #contact {
     #contact-button {
         margin: 0.5rem auto;
@@ -103,6 +128,26 @@ a.navbar-item.is-active {
 
     hr {
         background-color: black;
+    }
+
+    .icon-left {
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+        margin-right: 0.5em;
+    }
+
+    .icon-right {
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+        margin-left: 0.5em;
+    }
+
+    .icon-social {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
     }
 }
 
