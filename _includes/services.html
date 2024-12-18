@@ -11,24 +11,25 @@
                 </p>
             </div>
 
+            <!-- Service Card List -->
             <div class="columns is-centered is-multiline">
                 {% for service in site.data.services %}
                 <div class="column is-one-third-desktop is-half-tablet">
-                    <div class="service-box box has-text-centered">
+                    <div class="box has-text-centered">
+                        <!-- Icon -->
                         <div>
-                            <!-- Icon -->
                             <figure class="image is-64x64 is-inline-block">
                                 <img src="{{service.icon}}">
                             </figure>
-
-                            <!-- Title -->
-                            <h2 class="title is-4 is-uppercase">
-                                {{service.title}}
-                            </h2>
-
-                            <!-- Paragraph -->
-                            <p>{{service.description}}</p>
                         </div>
+
+                        <!-- Title -->
+                        <h2 class="title is-4 is-uppercase">
+                            {{service.title}}
+                        </h2>
+
+                        <!-- Description -->
+                        <p>{{service.description}}</p>
                     </div>
                 </div>
                 {% endfor %}

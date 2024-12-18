@@ -109,6 +109,16 @@ a.navbar-item.is-active {
     }
 }
 
+#portfolio {
+    .thumbnail {
+        width: 320px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+}
+
 #contact {
     #contact-button {
         margin: 0.5rem auto;
@@ -130,14 +140,14 @@ a.navbar-item.is-active {
         background-color: black;
     }
 
-    .icon-left {
+    .icon-contact-left {
         vertical-align: middle;
         width: 24px;
         height: 24px;
         margin-right: 0.5em;
     }
 
-    .icon-right {
+    .icon-contact-right {
         vertical-align: middle;
         width: 24px;
         height: 24px;

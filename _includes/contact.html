@@ -1,6 +1,5 @@
-<section class="hero is-fullheight has-text-centered" style="background-color: #c0e4ff" id="contact">
+<section class="hero is-fullheight has-text-centered" style="background-color: #f0ffff" id="contact">
     <div class="hero-body">
-        
         <div class="container">
             <div class="heading">
                 <h1 class="title is-size-2 is-uppercase has-text-weight-bold">
@@ -11,25 +10,30 @@
                     Your Next Idea Starts Here.
                 </p>
             </div>
+
+            <!-- Contact Buttons -->
             {% unless site.email == "" or site.email == nil %}
             <a id="contact-button" href="mailto:{{site.email}}"
                 class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined has-text-weight-semibold column is-two-fifths"
                 target="_blank">
-                <img src="assets/images/email.svg" alt="Email Icon" class="icon-left">
+                <img src="assets/images/email.svg" alt="Email Icon" class="icon-contact-left">
                 <p>Send Me an Email</p>
-                <img src="assets/images/email.svg" alt="Email Icon" class="icon-right">
+                <img src="assets/images/email.svg" alt="Email Icon" class="icon-contact-right">
             </a>
             {% endunless %}
             {% unless site.phone_number == "" or site.phone_number == nil %}
             <a id="contact-button" href="https://api.whatsapp.com/send?phone={{site.phone_number}}"
                 class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined has-text-weight-semibold column is-two-fifths"
                 target="_blank">
-                <img src="assets/images/whatsapp.svg" alt="WhatsApp Icon" class="icon-left">
+                <img src="assets/images/whatsapp.svg" alt="WhatsApp Icon" class="icon-contact-left">
                 <p>Contact Me on WhatsApp</p>
-                <img src="assets/images/whatsapp.svg" alt="WhatsApp Icon" class="icon-right">
+                <img src="assets/images/whatsapp.svg" alt="WhatsApp Icon" class="icon-contact-right">
             </a>
             {% endunless %}
+
             <hr>
+
+            <!-- Social Media Buttons -->
             <h3 class="is-size-5 is-uppercase has-text-weight-semibold is-marginless">
                 Follow Me Here
             </h3>

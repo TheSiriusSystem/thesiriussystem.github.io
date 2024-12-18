@@ -4,28 +4,26 @@ layout: compress
 
 <!DOCTYPE html>
 <html>
+    <head>
+        {% include head.html %}
+    </head>
 
-<head>
-    {% include head.html %}
-</head>
+    <body>
+        {% include navbar.html %}
 
-<body>
-    {% include navbar.html %}
-
-    <!--Main Section-->
-    <section class="hero is-fullheight" id="projects">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <div class="section">
-                    <p class="subtitle is-uppercase has-text-weight-medium has-text-grey">Projects</p>
+        <!-- Main Section -->
+        <section class="hero is-fullheight" id="projects">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="section">
+                        <p class="subtitle is-uppercase has-text-weight-medium has-text-grey">Projects</p>
+                    </div>
+                    {% include project-card.html %}
                 </div>
-                {% include project-card.html %}
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!--Footer-->
-    {% include footer.html %}
-</body>
-
+        <!-- Footer -->
+        {% include footer.html %}
+    </body>
 </html>

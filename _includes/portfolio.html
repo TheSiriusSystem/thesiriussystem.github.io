@@ -1,0 +1,24 @@
+<section class="hero is-fullheight has-text-centered" style="background-color: #c0e4ff" id="portfolio">
+    <div class="hero-body">
+        <div class="container">
+            <div class="heading">
+                <h1 class="title is-size-2 is-uppercase has-text-weight-bold">
+                    Portfolio
+                </h1>
+                <br>
+                <p class="subtitle is-uppercase has-text-weight-normal">
+                    What I Created.
+                </p>
+            </div>
+
+            <!-- Item Carousel -->
+            <div class="main-carousel" data-flickity='{"cellAlign": "center", "contain": true}'>
+                {% for project in site.data.projects %}
+                <figure class="image is-256x256">
+                    <img src="{{project.image}}" alt="Project Thumbnail">
+                </figure>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
