@@ -1,8 +1,10 @@
-- name: KoboldAI Frontend
-  image: https://cdn.pixabay.com/photo/2015/01/08/18/27/startup-593341_960_720.jpg
-  link: projects/first
-  description: A simple frontend for KoboldAI.
-- name: CustomOST-to-BeardLib Tool
-  link: projects/second
-  image: https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg
-  description: A tool for PAYDAY 2 modders.
+- title: KoboldAI Frontend
+  image: https://raw.githubusercontent.com/TheSiriusSystem/KoboldAI-Frontend/refs/heads/main/icon.svg
+  description: A simple frontend for KoboldCpp, a program that allows you to run language models (LMs) locally on your computer.
+  video_id: y8vY0HsKMiw
+  link: https://github.com/TheSiriusSystem/KoboldAI-Frontend
+
+- title: CustomOST-to-BeardLib Tool
+  image: https://raw.githubusercontent.com/TheSiriusSystem/PD2-CustomOST-to-BeardLib-Tool/refs/heads/main/screenshots/interface.png
+  description: A tool for PAYDAY 2 modders that allows you to convert Custom OST tracks in a few clicks.
+  link: https://github.com/TheSiriusSystem/PD2-CustomOST-to-BeardLib-Tool

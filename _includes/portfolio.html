@@ -7,18 +7,88 @@
                 </h1>
                 <br>
                 <p class="subtitle is-uppercase has-text-weight-normal">
-                    What I Created.
+                    A Collage of My Works.
                 </p>
+                <br>
             </div>
 
-            <!-- Item Carousel -->
-            <div class="main-carousel" data-flickity='{"cellAlign": "center", "contain": true}'>
+            <!-- Project Card Grid -->
+            <div class="columns is-centered is-multiline">
                 {% for project in site.data.projects %}
-                <figure class="image is-256x256">
-                    <img src="{{project.image}}" alt="Project Thumbnail">
-                </figure>
+                <div class="column is-2">
+                    <figure class="project-card image is-clickable is-4by3"
+                        data-title="{{project.title}}" data-description="{{project.description}}" data-video_id="{{project.video_id}}" data-link="{{project.link}}">
+                        <img src="{{project.image}}">
+                    </figure>
+                </div>
                 {% endfor %}
             </div>
         </div>
     </div>
+
+    <div class="modal" id="project-modal">
+        <div class="modal-background" id="project-modal-background"></div>
+
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title" id="project-modal-title"></p> <!-- Updated during runtime -->
+                <button class="delete" aria-label="close" id="modal-close-header"></button>
+            </header>
+
+            <!-- Updated during runtime -->
+            <div class="modal-card-body">
+                <div id="project-modal-description"></div>
+
+                <div class="is-hidden" id="project-modal-video">
+                    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="project-modal-video-iframe"></iframe>
+                </div>
+            </div>
+
+            <footer class="modal-card-foot">
+                <a class="button is-link" id="project-modal-link" target="_blank">Visit</a> <!-- Updated during runtime -->
+                <button class="button" id="modal-close-footer">Close</button>
+            </footer>
+        </div>
+    </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('project-modal');
+        const modalTitle = document.getElementById('project-modal-title');
+        const modalDescription = document.getElementById('project-modal-description');
+        const modalVideo = document.getElementById('project-modal-video');
+        const modalVideoIFrame = document.getElementById('project-modal-video-iframe');
+        const modalLink = document.getElementById('project-modal-link');
+
+        const openModal = (card) => {
+            modal.classList.add('is-active');
+            modalTitle.textContent = card.dataset.title;
+            modalDescription.innerHTML = `<p>${card.dataset.description}</p>`;
+            if (card.dataset.video_id) {
+                modalVideo.classList.remove('is-hidden');
+                modalVideoIFrame.src = 'https://www.youtube.com/embed/' + card.dataset.video_id;
+            } else {
+                modalVideo.classList.add('is-hidden');
+                modalVideoIFrame.src = '';
+            }
+            modalLink.href = card.dataset.link;
+        };
+
+        const closeModal = () => {
+            modal.classList.remove('is-active');
+            modalVideoIFrame.src = '';
+        };
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === document.getElementById('modal-close-header') || e.target === document.getElementById('modal-close-footer') || e.target === document.getElementById('project-modal-background')) {
+                closeModal();
+            }
+        });
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', () => openModal(card));
+        });
+    });
+</script>
