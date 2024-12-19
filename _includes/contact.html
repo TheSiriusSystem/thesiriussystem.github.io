@@ -16,18 +16,18 @@
             <a id="contact-button" href="mailto:{{site.email}}"
                 class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined has-text-weight-semibold column is-two-fifths"
                 target="_blank">
-                <img src="assets/images/email.svg" alt="Email Icon" class="icon-contact-left">
+                <img src="/assets/images/email.svg" alt="Email Icon" class="icon-contact-left">
                 <p>Send Me an Email</p>
-                <img src="assets/images/email.svg" alt="Email Icon" class="icon-contact-right">
+                <img src="/assets/images/email.svg" alt="Email Icon" class="icon-contact-right">
             </a>
             {% endunless %}
             {% unless site.phone_number == "" or site.phone_number == nil %}
             <a id="contact-button" href="https://api.whatsapp.com/send?phone={{site.phone_number}}"
                 class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined has-text-weight-semibold column is-two-fifths"
                 target="_blank">
-                <img src="assets/images/whatsapp.svg" alt="WhatsApp Icon" class="icon-contact-left">
+                <img src="/assets/images/whatsapp.svg" alt="WhatsApp Icon" class="icon-contact-left">
                 <p>Contact Me on WhatsApp</p>
-                <img src="assets/images/whatsapp.svg" alt="WhatsApp Icon" class="icon-contact-right">
+                <img src="/assets/images/whatsapp.svg" alt="WhatsApp Icon" class="icon-contact-right">
             </a>
             {% endunless %}
 
@@ -40,17 +40,17 @@
             <div class="column is-full is-size-3">
                 {% unless site.facebook_username == "" or site.facebook_username == nil %}
                 <a href="https://www.facebook.com/{{site.facebook_username}}" target="_blank" class="has-text-black">
-                    <img src="assets/images/facebook.svg" alt="Facebook Icon" class="icon-social">
+                    <img src="/assets/images/facebook.svg" alt="Facebook Icon" class="icon-social">
                 </a>
                 {% endunless %}
                 {% unless site.twitter_username == "" or site.twitter_username == nil %}
                 <a href="https://x.com/{{site.twitter_username}}" target="_blank" class="has-text-black">
-                    <img src="assets/images/twitter.svg" alt="Twitter/X Icon" class="icon-social">
+                    <img src="/assets/images/twitter.svg" alt="Twitter/X Icon" class="icon-social">
                 </a>
                 {% endunless %}
                 {% unless site.github_username == "" or site.github_username == nil %}
                 <a href="https://github.com/{{site.github_username}}" target="_blank" class="has-text-black">
-                    <img src="assets/images/github.svg" alt="GitHub Icon" class="icon-social">
+                    <img src="/assets/images/github.svg" alt="GitHub Icon" class="icon-social">
                 </a>
                 {% endunless %}
             </div>
