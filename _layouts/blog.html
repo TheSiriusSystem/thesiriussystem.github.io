@@ -32,16 +32,20 @@ layout: compress
             {% for post in site.posts %}
             <a href="{{post.url | absolute_url}}">
                 <div class="columns has-text-centered" id="blog-card">
+                    <!-- Post Image -->
                     <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
                         <div class="image is-16by9">
                             <img src="{{post.post-image}}">
                         </div>
                     </div>
-            
+
                     <div class="column has-text-left-desktop has-text-left-tablet">
+                        <!-- Post Title -->
                         <h1 class="title is-size-4-touch">
                             {{post.title}}
                         </h1>
+
+                        <!-- Post Contents (truncated) -->
                         <div class="content has-text-grey">
                             {{post.content | truncate: 300 | strip_html | strip_newlines | strip | escape}}
                             <hr class="has-background-grey">

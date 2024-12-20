@@ -12,7 +12,6 @@ layout: compress
         <section class="hero is-fullheight has-text-centered" id="post">
             <div class="hero-body">
                 <div class="container">
-                    <!-- Heading -->
                     <a href="{{page.url | relative_url}}" class="has-text-black" id="title">
                         <h1 class="title has-text-centered is-2 has-text-weight-semibold">
                             {{page.title}}
@@ -20,8 +19,8 @@ layout: compress
                     </a>
                     <hr class="has-background-black">
 
-                    <!-- Details -->
                     <div class="columns is-variable is-5">
+                        <!-- Post Image -->
                         <div class="column is-6">
                             <figure class="image is-16by9 has-shadow">
                                 <img src="{{page.post-image}}" id="post-image">
@@ -29,16 +28,19 @@ layout: compress
                         </div>
 
                         <div class="subtitle column is-5 has-text-left-desktop has-text-left-fullhd has-text-left-tablet has-text-center-mobile">
+                            <!-- Description -->
                             {% unless page.description == nil or page.description == "" %}
                             <p id="description" class="content is-small has-text-weight-medium is-uppercase">
                                 {{page.description | strip | strip_html | strip_newlines }}
                             </p>
                             {% endunless %}
 
+                            <!-- Publish Date -->
                             <p class="subtitle is-6 is-uppercase has-text-weight-normal has-text-black-ter">
                                 Published on <b>{{page.date | date: "%-B %d, %Y"}}</b>
                             </p>
 
+                            <!-- Tag Grid -->
                             {% unless page.tags.size == 0 %}
                             <p class="subtitle is-uppercase">
                                 {% assign i = 0 %}
@@ -49,6 +51,7 @@ layout: compress
                             </p>
                             {% endunless %}
 
+                            <!-- Estimated Time to Read (in minutes) -->
                             {% assign words = content | number_of_words %}
                             {% unless content.size == 0 %}
                             <p class="subtitle is-uppercase">
