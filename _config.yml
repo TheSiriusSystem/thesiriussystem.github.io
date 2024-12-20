@@ -11,14 +11,14 @@ title: Blake Sirius Anacleto
 # Description of the Site
 description: Home of a Software Engineer
 # URL of Image of the Site
-site-image: /assets/images/hero_image.jpg
+site-image: /assets/images/hero-image.jpg
 # Keywords of the Site
 site-keywords: Site, Portfolio
 # URL for the Image of custom Favicon
 favicon-url: /assets/images/favicon.png
 
 # URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
-heroimage: /assets/images/hero_image.jpg
+heroimage: /assets/images/hero-image.jpg
 
 # Social Media and Contact
 # If you don't want to use any icon, you can leave them blank.
