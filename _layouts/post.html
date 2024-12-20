@@ -30,7 +30,9 @@ layout: compress
 
                         <div class="subtitle column is-5 has-text-left-desktop has-text-left-fullhd has-text-left-tablet has-text-center-mobile">
                             {% unless page.description == nil or page.description == "" %}
-                            <p id="description" class="content is-small has-text-weight-medium is-uppercase">{{page.description | strip | strip_html | strip_newlines }}</p>
+                            <p id="description" class="content is-small has-text-weight-medium is-uppercase">
+                                {{page.description | strip | strip_html | strip_newlines }}
+                            </p>
                             {% endunless %}
 
                             <p class="subtitle is-6 is-uppercase has-text-weight-normal has-text-black-ter">
@@ -60,6 +62,23 @@ layout: compress
                     <div class="content has-text-justified-desktop has-text-justified-fullhd has-text-justified has-text-justified-tablet has-text-left-mobile">
                         <p>{{content}}</p>
                     </div>
+
+                    <!-- Comments System Embed -->
+                    <script src="https://giscus.app/client.js"
+                            data-repo="TheSiriusSystem/thesiriussystem.github.io"
+                            data-repo-id="R_kgDONeVFFw"
+                            data-category="Comments"
+                            data-category-id="DIC_kwDONeVFF84ClYp2"
+                            data-mapping="title"
+                            data-strict="1"
+                            data-reactions-enabled="1"
+                            data-emit-metadata="0"
+                            data-input-position="top"
+                            data-theme="light"
+                            data-lang="en"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
                 </div>
             </div>
         </section>
