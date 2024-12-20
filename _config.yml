@@ -9,11 +9,11 @@ baseurl:
 # Title of the Site
 title: Blake Sirius Anacleto
 # Description of the Site
-description: Home of a Software Engineer
+description: Explore the portfolio of Blake, a passionate software engineer and aspiring graphic designer.
 # URL of Image of the Site
-site-image: /assets/images/hero-image.jpg
+site-image: /assets/images/site-image.jpg
 # Keywords of the Site
-site-keywords: Site, Portfolio
+site-keywords: Roopkotha, Blake, Portfolio, Software Engineer, Video Game Developer, Software Developer, Programmer, Coder, Graphic Designer, Artist, Programming, Coding, Graphic Design, Art Projects
 # URL for the Image of custom Favicon
 favicon-url: /assets/images/favicon.png
 
