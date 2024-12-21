@@ -1,11 +1,11 @@
 - title: Video Game Development
   description: I build fun and engaging gaming experiences with creativity in mind. Whether it's 2D or 3D, I can accomodate your vision.
-  icon: /assets/images/gamepad.svg
+  icon: /assets/images/icons/services/gamepad.svg
 
 - title: Software Development
   description: With Godot, I can tailor solutions to your needs. From user-friendly interfaces to frontends, I've got you covered.
-  icon: /assets/images/code.svg
+  icon: /assets/images/icons/services/code.svg
 
 - title: Graphic Design
   description: I bring your imagination to life with bold, visually stunning designs. You or your brand deserve to stand out from the rest.
-  icon: /assets/images/palette.svg
+  icon: /assets/images/icons/services/palette.svg

@@ -1,15 +1,15 @@
 - title: Programming Expertise
   description: Proficient in Luau, GDScript, and Lua. Slight experience with C# (Godot, Unity).
-  icon: /assets/images/terminal.svg
+  icon: /assets/images/icons/skills/terminal.svg
 
 - title: Problem-Solving
   description: Tackling complex challenges with creative and logical approaches.
-  icon: /assets/images/brain.svg
+  icon: /assets/images/icons/skills/brain.svg
 
 - title: Software Engineering
   description: Developing video games and software, with a focus on clean code and maintainability.
-  icon: /assets/images/gear.svg
+  icon: /assets/images/icons/skills/gear.svg
 
 - title: Digital Illustration
   description: Bringing imagination to life with vibrant artwork. Proficient in Adobe Illustrator.
-  icon: /assets/images/paintbrush.svg
+  icon: /assets/images/icons/skills/paintbrush.svg
